@@ -9,7 +9,7 @@ Version: %{version}
 Release: %{release}
 # http://www.ralinktech.com.tw/data/drivers/%{rtname}_V%{version}.zip
 # (Repackaged as tar.bz2 because of unzip warnings that makes build fail)
-Source: %{rtname}_V%{version}.tar.bz2
+Source: %{rtname}_V%{version}.tar.xz
 License: Redistributable, no modification permitted
 Group: System/Kernel and hardware
 Url: http://www.ralinktech.com
