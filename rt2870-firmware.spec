@@ -1,7 +1,7 @@
 %define name rt2870-firmware
 %define rtname RT2870_Firmware
-%define version 8
-%define release %mkrel 2
+%define version 22
+%define release %mkrel 1
 
 Summary: Firmware for the RT2870 chip
 Name: %{name}
