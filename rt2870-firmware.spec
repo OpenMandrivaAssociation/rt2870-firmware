@@ -1,20 +1,16 @@
-%define name rt2870-firmware
 %define rtname RT2870_Firmware
-%define version 22
-%define release %mkrel 1
 
-Summary: Firmware for the RT2870 chip
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Summary:	Firmware for the RT2870 chip
+Name:		rt2870-firmware
+Version:	22
+Release:	2
 # http://www.ralinktech.com.tw/data/drivers/%{rtname}_V%{version}.zip
 # (Repackaged as tar.xz because of unzip warnings that makes build fail)
-Source: %{rtname}_V%{version}.tar.xz
-License: Redistributable, no modification permitted
-Group: System/Kernel and hardware
-Url: http://www.ralinktech.com
-BuildRoot: %{_tmppath}/%{name}-buildroot
-BuildArch: noarch
+Source0:	%{rtname}_V%{version}.tar.xz
+License:	Redistributable, no modification permitted
+Group:		System/Kernel and hardware
+Url:		http://www.ralinktech.com
+BuildArch:	noarch
 
 %description
 This package contains the firmware files for the RT2870 chip.
@@ -25,14 +21,9 @@ This package contains the firmware files for the RT2870 chip.
 %build
 
 %install
-rm -rf %{buildroot}
 install -d %{buildroot}/lib/firmware
 install -m644 rt*.bin %{buildroot}/lib/firmware
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(0644,root,root,0755)
 %doc LICENSE.ralink-firmware.txt
 /lib/firmware/rt*.bin
