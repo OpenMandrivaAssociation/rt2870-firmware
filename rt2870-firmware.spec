@@ -3,7 +3,7 @@
 Summary:	Firmware for the RT2870 chip
 Name:		rt2870-firmware
 Version:	22
-Release:	2
+Release:	3
 # http://www.ralinktech.com.tw/data/drivers/%{rtname}_V%{version}.zip
 # (Repackaged as tar.xz because of unzip warnings that makes build fail)
 Source0:	%{rtname}_V%{version}.tar.xz
